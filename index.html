@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header class="resume-header">
+            <div class="profile-header">
+                <h1 id="resumeTitle">Shakir Ahmed</h1>
+                <p id="resumeTagline">Full Stack Developer | Problem Solver | Creative Thinker</p>
+            </div>
+        </header>
+        <div class="field picture-upload">
+            <input type="file" id="imageUpload" accept="image/*" />
+            <div id="pictureContainer">
+                <img id="profilePicture" src="" alt="Profile Picture" />
+            </div>
+        </div>
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+        </div>
+        <div class="field">
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" />
+        </div>
+        <div class="field">
+            <label for="skills">Skills:</label>
+            <textarea id="skills"></textarea>
+        </div>
+        <div class="field">
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience"></textarea>
+        </div>
+        <div class="buttons">
+            <button id="previewButton">Preview</button>
+            <button id="submitButton">Submit</button>
+            <button id="downloadButton">Download as PDF</button>
+        </div>
+        <footer class="resume-footer">
+            <p>&copy; 2024 MR SHAKIR AHMED QAZI</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/shakir-ahmed-976325209" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/ShakirQazi/ShakirQazi.git" target="_blank" class="social-link">GitHub</a>
+                <a href="mailto:shakirkazi74@gmail.com" class="social-link">Email</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

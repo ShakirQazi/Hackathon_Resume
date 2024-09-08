@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.resume-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header {
+    margin-bottom: 15px;
+}
+
+#resumeTitle {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+#resumeTagline {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Field Styles */
+.field {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* Hover Effects */
+.field input[type="text"],
+.field textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Animation on Hover */
+.field input[type="text"]:hover,
+.field textarea:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    transform: scale(1.02);
+    background-color: #e9f0ff;
+}
+
+/* Animation After Hover */
+.field input[type="text"].interacted,
+.field textarea.interacted {
+    animation: postHoverAnimation 0.5s ease-out forwards;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Animation */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Profile Picture Hover Effect */
+#pictureContainer {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+#pictureContainer:hover {
+    border-color: #007bff;
+}
+
+/* Image Animation */
+#profilePicture {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Footer Styles */
+.resume-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes postHoverAnimation {
+    from {
+        border-color: #0056b3;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        transform: scale(1.02);
+        background-color: #e9f0ff;
+    }
+    to {
+        border-color: #ccc;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.1);
+        transform: scale(1);
+        background-color: #fff;
+    }
+}
